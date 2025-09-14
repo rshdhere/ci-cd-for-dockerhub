@@ -1,0 +1,14 @@
+{
+  "name": "ws-backend",
+  "module": "server.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "dependencies": {
+    "db": "*"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

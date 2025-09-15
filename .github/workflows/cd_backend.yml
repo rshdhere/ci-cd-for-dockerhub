@@ -31,6 +31,7 @@ jobs:
                   set -e
                   docker stop user_backend || true
                   docker rm user_backend || true
+                  docker image prune -af || true
                   docker pull rshdhere/monorepo-backend:${{ github.sha }}
                   docker run --name user_backend -d -p 8080:8080 rshdhere/monorepo-backend:${{ github.sha }}
                 "

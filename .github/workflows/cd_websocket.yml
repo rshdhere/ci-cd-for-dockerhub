@@ -1,4 +1,4 @@
-name: deploy backend
+name: deploy websocket
 on:
     push:
         branches: ["main"]
@@ -19,8 +19,8 @@ jobs:
               uses: docker/build-push-action@v4
               with:
                 context: .
-                file: ./docker/Dockerfile.backend
+                file: ./docker/Dockerfile.websocket
                 push: true
-                tags: rshdhere/monorepo-backend:${{ github.sha }}
+                tags: rshdhere/monorepo-websocket:${{ github.sha }}
             
             ## deploy to a VM

@@ -2,6 +2,10 @@ FROM oven/bun:1
 
 WORKDIR /usr/src/app
 
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends openssl \
+  && rm -rf /var/lib/apt/lists/*
+
 COPY ./packages ./packages
 COPY ./bun.lock ./bun.lock
 

@@ -1,4 +1,5 @@
 import {prismaClient} from "db/client"
+export const dynamic = 'force-dynamic'
 
 export default async function Home() {
   const users = await prismaClient.user.findMany()
@@ -8,3 +9,7 @@ export default async function Home() {
    </div>
   );
 }
+
+// export const revalidate = 60 // revalidate every 60 seconds
+// or
+// export const dynamic = 'force-dynamic'

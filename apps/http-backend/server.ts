@@ -36,3 +36,5 @@ app.post("/user", (req, res) => {
     res.status(500).json({ error: err.message });
   });
 });
+
+app.listen(8080)
